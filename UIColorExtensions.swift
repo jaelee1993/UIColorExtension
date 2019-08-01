@@ -60,18 +60,10 @@ extension UIColor {
     
     
 
-    
-    static func randomColor() -> UIColor {
-        // If you wanted a random alpha, just create another
-        // random number for that too.
-        return UIColor(red:   .random(),
-                       green: .random(),
-                       blue:  .random(),
-                       alpha: 1.0)
-    }
-    
+  
     var invertedColor: UIColor {
         var r: CGFloat = 0.0, g: CGFloat = 0.0, b: CGFloat = 0.0, a: CGFloat = 0.0
         UIColor.red.getRed(&r, green: &g, blue: &b, alpha: &a)
         return UIColor(red: 1 - r, green: 1 - g, blue: 1 - b, alpha: a) // Assuming you want the same alpha value.
+    }
 }
